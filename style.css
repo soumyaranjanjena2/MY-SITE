@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle, #000428, #000000);
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 10;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #00eaff;
+}
+
+/* SECTIONS */
+section {
+    padding: 120px 20px 40px;
+}
+
+/* GLASS CARDS */
+.glass-card {
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 25px;
+    padding: 50px;
+    width: 85%;
+    margin: auto;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* HERO */
+#hero {
+    padding-top: 160px;
+}
+
+.profile-img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+
+
+.hero-buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* GLOW BUTTON */
+.btn-glow {
+    padding: 12px 34px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid rgba(255,255,255,0.25);
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 20px #00eaff;
+    border-color: #00eaff;
+}
+/* resume button highlight */
+.resume-btn {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: cyan;
+}
+.resume-btn:hover {
+    box-shadow: 0 0 25px cyan;
+    border-color: cyan;
+}
+
+/* SKILLS GRID */
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    list-style: none;
+    margin-top: 20px;
+}
+
+/* PROJECTS */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-box {
+    background: rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 18px;
+    text-align: left;
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.project-box:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 18px rgba(0,255,255,0.4);
+}
+
+/* FOOTER */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* SCROLL ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.8s;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+    .skills-list {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .project-grid {
+        grid-template-columns: repeat(1,1fr);
+    }
+    nav {
+        display: none;
+    }
+}
+/* ROUND GLASS ICON BUTTONS */
+.icon-btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: 0.35s;
+}
+
+.icon-btn img {
+    width: 28px;
+    filter: brightness(100%);
+    transition: 0.35s;
+}
+
+/* HOVER EFFECT */
+.icon-btn:hover {
+    transform: scale(1.2) translateY(-6px);
+    box-shadow: 0 0 15px cyan, 0 0 40px rgba(0,255,255,0.4);
+}
+
+.icon-btn:hover img {
+    filter: brightness(200%);
+}
+.email-link {
+    color: cyan;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+    filter: drop-shadow(0px 0px 6px cyan);
+}
+.phone-link {
+    color: cyan;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.phone-link:hover {
+    text-decoration: underline;
+    filter: drop-shadow(0px 0px 6px cyan);
+}
+/* CONTACT SECTION FLEX LAYOUT */
+.contact-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Left side text block */
+.contact-info p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+/* Right side icon block */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+#contact h2 {
+    margin-bottom: 25px;
+}
+
+
